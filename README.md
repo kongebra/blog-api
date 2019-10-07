@@ -72,4 +72,4 @@ I will use Git Flow as branching strategy for this project for practice.
 
 ## CI/CD
 
-Coming...
+Will look into GitHub Actions for CI for this, and look for alternativs for CD.
