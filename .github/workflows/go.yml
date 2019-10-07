@@ -28,6 +28,8 @@ jobs:
             curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
             dep ensure
         fi
+    - name: Get Golint
+      run: go get -u golang.org/x/lint/golint
     - name: Lint
       run: golint -v ./...
     - name: Test
