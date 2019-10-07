@@ -63,3 +63,13 @@ No prior experience with Cosmos DB, but are currently employeed as a .NET develo
 
 -   No experience
 -   Expensive
+
+## Branching strategy
+
+### Git Flow
+
+I will use Git Flow as branching strategy for this project for practice.
+
+## CI/CD
+
+Coming...
