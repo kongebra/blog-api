@@ -1,0 +1,26 @@
+name: Docker
+on:
+  push:
+    branches:
+      - master
+      - release/*
+      - develop
+jobs:
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/docker/login@master
+      - name: Login
+        run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
+        
+      - uses: actions/checkout@v1
+      - name: Build
+        run: docker build --tag kongebra/blog-api:latest
+        
+      - name: Tag
+        run: docker tag kongebra/blog-api:latest kongebra/blog-api:$(date +%s)
+        
+      - name: Publish
+        run: docker push kongebra/blog-api:$(date +%s)
