@@ -64,6 +64,18 @@ No prior experience with Cosmos DB, but are currently employeed as a .NET develo
 -   No experience
 -   Expensive
 
+##### Firestore
+
+No prior experience with Firestore, but I have a lot of credit with Google Cloud which makes it cheap.
+
+**_Pros_**
+
+-   Have GCloud credits
+
+**_Cons_**
+
+-   No experience
+
 ## Branching strategy
 
 ### Git Flow
