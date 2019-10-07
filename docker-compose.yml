@@ -1,0 +1,8 @@
+version: '3.7'
+
+services:
+  blog-api:
+    image: blog-api
+    build: .
+    ports:
+      - 5000:5000
