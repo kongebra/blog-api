@@ -85,3 +85,11 @@ I will use Git Flow as branching strategy for this project for practice.
 ## CI/CD
 
 Will look into GitHub Actions for CI for this, and look for alternativs for CD.
+
+## Project structure
+
+I will not follow all the "standards" on how to structure a Go-project. I will create this projects as it makes sense to make it for me.
+
+### Code infrastructure
+
+I will use the Service-pattern for this project, so that I could be able to change database or something else in the future for it.
