@@ -1,7 +1,6 @@
 FROM golang:1.13 as base
 
-EXPOSE 80
-EXPOSE 443
+EXPOSE 5000
 
 WORKDIR /app
 
@@ -13,7 +12,8 @@ ENV GO111MODULE=on \
 COPY go.mod .
 COPY go.sum .
 
-RUN go mod download
+RUN go mod download && \
+    go mod verify
 
 COPY . .
 
