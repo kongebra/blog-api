@@ -11,7 +11,6 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
-      - name: Login
       - uses: actions/docker/login@master
         with: 
           username: ${{ secrets.DOCKER_USERNAME }}
