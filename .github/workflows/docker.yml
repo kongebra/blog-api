@@ -15,16 +15,16 @@ jobs:
           VERSION:  $(date +%s)
           
       - name: Echo Version
-        run: echo $VERSION
+        run: echo ${VERSION}
         
-      - name: Docker Login
-        run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
+      #- name: Docker Login
+       # run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
         
-      - name: Docker Build
-        run: docker build -t blog-api .
+      #- name: Docker Build
+       # run: docker build -t blog-api .
         
-      - name: Docker Tag
-        run: docker tag blog-api kongebra/blog-api:$VERSION
+      #- name: Docker Tag
+       # run: docker tag blog-api kongebra/blog-api:$VERSION
         
-      - name: Docker Push
-        run: docker push kongebra/blog-api:$VERSION
+      #- name: Docker Push
+       # run: docker push kongebra/blog-api:$VERSION
