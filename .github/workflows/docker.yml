@@ -2,29 +2,24 @@ name: Docker
 on:
   push:
     branches:
-      - master
-      - release/*
       - develop
 jobs:
   build:
     env:
-      VERSION:  $(date +%s)
+      VERSION: $(date +%s)
     name: Build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-    
-      - name: Echo Version
-        run: echo ${VERSION}
         
-      #- name: Docker Login
-       # run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
+      - name: Docker Login
+        run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
         
-      #- name: Docker Build
-       # run: docker build -t blog-api .
+      - name: Docker Build
+        run: docker build -t blog-api .
         
-      #- name: Docker Tag
-       # run: docker tag blog-api kongebra/blog-api:$VERSION
+      - name: Docker Tag
+        run: docker tag blog-api kongebra/blog-api:develop
         
-      #- name: Docker Push
-       # run: docker push kongebra/blog-api:$VERSION
+      - name: Docker Push
+        run: docker push kongebra/blog-api:develop
